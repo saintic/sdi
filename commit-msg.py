@@ -30,7 +30,7 @@ def specification_check(filename):
                 content.pop(-1)
             # must have a line containing type and subject
             header = content[0]
-            if re.match(r'^(feat|fix|docs|style|refactor|perf|test|chore|misc)\:\s?([\w\_\#\s\:\.]{1,49}$)', header):
+            if re.match(r'^(feat|fix|docs|style|refactor|perf|test|chore|misc)\:\s?([\w\_\#\s\:\.\-]{1,49}$)', header):
                 if len(content) > 1:
                     # Multi-line comment
                     blank = content[1]
@@ -51,7 +51,6 @@ def specification_check(filename):
                         return 3
                 else:
                     # Single-line comment
-                    echo("Succes: committed message", "green")
                     return 0
             else:
                 echo("Error: the header format is not standardized")

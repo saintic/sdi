@@ -1,6 +1,6 @@
-关于git的使用实践
+## 关于git的使用实践
 
-1、 .gitconfig
+### 1、 .gitconfig
 
 ```bash
 $ cat ~/.gitconfig
@@ -24,7 +24,7 @@ $ cat ~/.gitconfig
     editor = vim
 ```
 
-2、 .gitmessage
+### 2、 .gitmessage
 
 ```bash
 $ cat ~/.gitmessage
@@ -32,7 +32,7 @@ $ cat ~/.gitmessage
 # head: <type>(<scope>): <subject>
 # - type: feat, fix, docs, style, refactor, test, chore, perf
 # - scope: can be empty (eg. if the change is a global or difficult to assign to a single component)
-# - subject: start with verb (such as 'change'), 50-character line
+# - subject: start with verb (such as 'change'), 50-character line, english
 #
 # body: 72-character wrapped. This should answer:
 # * Why was this change necessary?
@@ -50,7 +50,7 @@ $ cat ~/.vimrc
 autocmd Filetype gitcommit setlocal spell textwidth=72
 ```
 
-3、 gpg
+### 3、 gpg
 
 ```bash
 $ gpg --gen-key
@@ -60,10 +60,11 @@ $ git config --global commit.gpgsign true
 $ git config --global user.signingkey Your_GPG_ID
 ```
 
-4、 强制提交规范钩子
+### 4、 强制提交信息规范的钩子
 
 Please see [commit-msg.py](commit-msg.py "commit-msg.py")
 
 ```bash
-$ cd GIT-PROJECT && wget -O .git/hooks/commit-msg https://satic.io/p && chmod +x .git/hooks/commit-msg
+$ cd GIT-PROJECT
+$ wget -c -O .git/hooks/commit-msg https://satic.io/q && chmod +x .git/hooks/commit-msg
 ```

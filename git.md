@@ -28,6 +28,7 @@ $ cat ~/.gitconfig
 
 ```bash
 $ cat ~/.gitmessage
+
 #
 # head: <type>(<scope>): <subject>
 # - type: feat, fix, docs, style, refactor, test, chore, perf

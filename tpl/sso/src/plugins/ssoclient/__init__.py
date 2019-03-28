@@ -120,8 +120,6 @@ def hmac_sha256(message):
 
 # 定义sso server地址并删除SSO多余参数
 sso_server = SSO.get("sso_server").strip("/")
-if not url_check(sso_server):
-    raise
 
 # 定义蓝图
 sso_blueprint = Blueprint("sso", "sso")

@@ -28,7 +28,7 @@
 
 ## 提交问题
 
-* 提交问题：[issues](http://satic.io/n "封存仓库请在此提交issue")
+* 提交问题：[封存仓库请在此提交issue](https://satic.io/issues "封存仓库请在此提交issue")
 
 * 加入Q群：[`577543189`](https://jq.qq.com/?_wv=1027&k=5aZyCMV)
 

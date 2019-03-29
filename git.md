@@ -67,5 +67,5 @@ Please see [commit-msg.py](commit-msg.py "commit-msg.py")
 
 ```bash
 $ cd GIT-PROJECT
-$ wget -c -O .git/hooks/commit-msg https://satic.io/commit-msg && chmod +x .git/hooks/commit-msg
+$ wget -O .git/hooks/commit-msg https://satic.io/commit-msg && chmod +x .git/hooks/commit-msg
 ```

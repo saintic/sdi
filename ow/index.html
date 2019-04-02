@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta charset='utf-8'>
+    <meta name='author' content="staugur,developers@saintic.com">
+    <meta name='keywords' content="saintic,satic.io">
+    <meta name='description' content="saintic.com,satic.io">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>SaintIC</title>
+    <link href="https://img.saintic.com/cdn/images/favicon-32.png" rel="icon" type="image/x-icon" />
+    <link href="https://img.saintic.com/cdn/images/favicon-32.png" rel="shortcut icon" type="image/x-icon" />
+    <style>
+        html,body{
+            padding:0;
+            margin: 0;
+            overflow: hidden;
+        }
+        canvas{
+            padding:0;
+            margin: 0;
+            border: 0;
+        }
+
+        #container{
+            text-align: center;
+        }
+
+        body {
+            background-color: #5d5d5dfa;
+            /*opacity: 0;*/
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            /*text-transform: uppercase;*/
+            font-size: 12px;
+            letter-spacing: 2px;
+            -webkit-tap-highlight-color: rgba(0,0,0,0);
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        /*body.ready { opacity: 1; }*/
+        .icon-text path,
+        .icon-text polygon {
+            /*opacity: 0;*/
+        }
+
+        .info {
+            text-align: center;
+        }
+
+        .description {
+            /*opacity: 0;*/
+            color: white;
+            margin-top: 20px;
+        }
+
+        .links {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        @media (min-width: 700px) {
+            .links {
+                -webkit-box-orient: horizontal;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                flex-direction: row;
+
+            }
+        }
+
+        .button {
+            /*opacity: 0;*/
+            position: relative;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            width: 180px;
+            height: 60px;
+            text-decoration: none;
+        }
+
+        .button.blue,a.blue {
+            color: #5E89FB;
+        }
+
+        .button.green,.credits>a.green {
+            color: #07C160;
+        }
+
+        .button.red,.credits>a.red {
+            color: #F95050;
+        }
+
+        .button.purple,.credits>a.purple {
+            color: #B15BFF;
+        }
+
+        .button.grass,.credits>a.grass {
+            color: #00E3E3;
+        }
+
+        .button.yellow,.credits>a.yellow {
+            color: #C4C400;
+        }
+
+        .button svg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            stroke-width: 1;
+            fill: none;
+            fill-rule: evenodd;
+            stroke: currentColor;
+        }
+
+        .button.green svg {
+            -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+        }
+
+        .button path {
+            scale: .9;
+            transform-origin: 50% 50%;
+        }
+
+        .credits {
+            /*opacity: 0;*/
+            margin-top: 20px;
+            color: #979797;
+        }
+
+        .credits a {
+            position: relative;
+            color: currentColor;
+            text-decoration: none;
+            /*text-decoration: underline;*/
+            border-bottom:1px dashed;
+        }
+
+        .credits a:after {
+            content: "";
+            /*opacity: 0;*/
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: -3px;
+            width: 100%;
+            border-bottom: 1px solid currentColor;
+            transition: opacity .75s ease;
+        }
+
+        .credits a:hover:after {
+          opacity: 1;
+          transition: opacity .25s ease;
+        }
+
+        .credits a,.credits span {
+            transition: color .75s ease;
+        }
+
+        .credits a:hover,
+        .highlighted {
+            color: white;
+            transition: color .25s ease;
+        }
+
+        #container{
+            margin-top:100px ;
+        }
+
+        @media only screen and (max-width: 500px) {
+            #container canvas{
+               width: 100%;
+            }
+        }
+
+        #wp {
+            z-index: 10;
+        }
+    </style>
+
+</head>
+
+<body>
+  <div id="wp" style="margin-top: 115.5px;">
+      <div id="container">
+          <img style="height: 150px;" src="https://img.saintic.com/cdn/images/logo.88.31.svg">
+        </div>
+        <div class="info">
+            <div class="links">
+                <a class="button blue" href="https://github.com/saintic" target="_blank">
+                    <svg viewBox="0 0 180 60">
+                        <path d="M10,10 C10,10 50,9.98999977 90,9.98999977 C130,9.98999977 170,10 170,10 C170,10 170.009995,20 170.009995,30 C170.009995,40 170,50 170,50 C170,50 130,50.0099983 90,50.0099983 C50,50.0099983 10,50 10,50 C10,50 9.98999977,40 9.98999977,30 C9.98999977,20 10,10 10,10 Z"></path>
+                    </svg>
+                    <span>GitHub Org</span>
+                </a>
+            </div>
+            <p class="description">
+                A small open source organization that wants to contribute code.
+            </p>
+            <p class="credits">
+                <a class="red" href="http://docs.saintic.com" target="_blank"><span>文档</span></a>
+                <a class="grass" href="https://blog.saintic.com" target="_blank"><scan>博客</scan></a>
+                <a class="yellow" href="https://satic.io" target="_blank"><scan>短网址服务</scan></a>
+                <a class="purple" href="https://open.saintic.com" target="_blank"><scan>诏预开放平台</scan></a>
+            </p>
+            <p class="credits">
+                &copy; <span class="date"><script>document.write( new Date().getFullYear() );</script></span> SaintIC. All rights reserved.
+            </p>
+        </div>
+  </div>
+  <pre style="position:absolute;left:40px;top:40px;transform:rotateZ(5deg);pointer-events: none;text-transform:none;">
+    <code>
+$ pip install -U SecureHTTP
+
+>>> from SecureHTTP import AESEncrypt, AESDecrypt, RSAEncrypt, RSADecrypt, generate_rsa_keys
+>>> ciphertext = AESEncrypt('ThisIsASecretKey', 'Hello World!')
+>>> plaintext = AESDecrypt("ThisIsASecretKey", ciphertext)
+
+>>> (pubkey, privkey) = generate_rsa_keys(incall=True)
+>>> ciphertext = RSAEncrypt(pubkey, 'Hello World!')
+>>> plaintext = RSADecrypt(privkey, ciphertext)
+
+
+$ pip install -U Flask-PluginKit
+
+>>> from flask_pluginkit import PluginManager
+>>> plugin = PluginManager(app)
+
+
+$ open https://api.github.com/users/staugur/repos
+
+
+$ open https://api.github.com/orgs/saintic/repos
+
+
+$ open https://status.satic.io
+       </code>
+  </pre>
+
+
+<script>
+document.querySelector('#wp').style.marginTop = (window.innerHeight - 700)/2+'px';
+</script>
+
+
+</body>
+</html>

@@ -5,8 +5,8 @@
 
     The program configuration file, the preferred configuration item, reads the system environment variable first.
 
-    :copyright: (c) 2018 by staugur.
-    :license: MIT, see LICENSE for more details.
+    :copyright: (c) 2019 by staugur.
+    :license: BSD, see LICENSE for more details.
 """
 
 from os import getenv

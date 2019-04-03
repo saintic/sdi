@@ -5,8 +5,8 @@
 
     SSO Client
 
-    :copyright: (c) 2018 by staugur.
-    :license: MIT, see LICENSE for more details.
+    :copyright: (c) 2019 by staugur.
+    :license: BSD, see LICENSE for more details.
 """
 
 #: Importing these two modules is the first and must be done.

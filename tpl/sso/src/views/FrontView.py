@@ -5,8 +5,8 @@
 
     The blueprint for front view.
 
-    :copyright: (c) 2018 by staugur.
-    :license: MIT, see LICENSE for more details.
+    :copyright: (c) 2019 by staugur.
+    :license: BSD, see LICENSE for more details.
 """
 
 from flask import Blueprint, g, redirect

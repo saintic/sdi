@@ -5,8 +5,8 @@
 
     Common function for web.
 
-    :copyright: (c) 2018 by staugur.
-    :license: MIT, see LICENSE for more details.
+    :copyright: (c) 2019 by staugur.
+    :license: BSD, see LICENSE for more details.
 """
 
 import json

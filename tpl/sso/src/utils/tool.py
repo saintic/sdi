@@ -5,8 +5,8 @@
 
     Common function.
 
-    :copyright: (c) 2018 by staugur.
-    :license: MIT, see LICENSE for more details.
+    :copyright: (c) 2019 by staugur.
+    :license: BSD, see LICENSE for more details.
 """
 
 import re, hashlib, datetime, time, random, hmac
@@ -29,6 +29,15 @@ hmac_sha256     = lambda message: hmac.new(key=SYSTEM["HMAC_SHA256_KEY"], msg=me
 gen_token       = lambda n=32:b32encode(uuid4().hex)[:n]
 gen_requestId   = lambda :str(uuid4())
 gen_fingerprint = lambda n=16,s=2: ":".join([ "".join(random.sample("0123456789abcdef",s)) for i in range(0, n) ])
+
+
+def welcome():
+    print(r"""
+ __            ___ __
+(_  _  o __ _|_ | /  
+__)(_| | | | |__|_\__
+
+    """)
 
 
 def ip_check(ip):

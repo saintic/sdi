@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-    ProcessName_XXX.main
-    ~~~~~~~~~~~~~~
+    main
+    ~~~~
 
     Entrance
 
@@ -37,7 +37,6 @@ __date__ = 'xxx'
 app = Flask(__name__)
 app.config.update(
     SECRET_KEY=os.urandom(24),
-    PLUGINKIT_AUTHMETHOD="BOOL",
     PLUGINKIT_GUNICORN_ENABLED=True,
     PLUGINKIT_GUNICORN_PROCESSNAME="gunicorn: master [{}]".format(GLOBAL["ProcessName"])
 )
@@ -58,7 +57,9 @@ def GlobalTemplateVariables():
 
 @app.before_request_top
 def before_request():
+    # 登录状态标记，True表示已登录，False表示未登录
     g.signin = verify_sessionId(request.cookies.get("sessionId"))
+    # sessionId和userId
     g.sid, g.uid = analysis_sessionId(request.cookies.get("sessionId"), "tuple") if g.signin else (None, None)
     # 用户信息
     g.userinfo = get_userinfo(g.uid)

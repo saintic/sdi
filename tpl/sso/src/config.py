@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-    ProcessName_XXX.config
-    ~~~~~~~~~~~~~~
+    config
+    ~~~~~~~
 
     The program configuration file, the preferred configuration item, reads the system environment variable first.
 
@@ -71,13 +71,6 @@ SYSTEM = {
 
     "JWT_SECRET_KEY": getenv("xxx_jwt_secret_key", "WBlE7_#qDf2vRb@vM!Zw#lqrg@rdd3A6"),
     # utils.jwt.JWTUtil类中所用加密key
-
-    # "Sign": {
-    #     "version": getenv("xxx_sign_version", "v1"),
-    #     "accesskey_id": getenv("xxx_sign_accesskeyid", "accesskey_id"),
-    #     "accesskey_secret": getenv("xxx_sign_accesskeysecret", "accesskey_secret"),
-    # }
-    # utils.Signature.Signature类中所有签名配置
 }
 
 

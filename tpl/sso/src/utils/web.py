@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-    ProcessName_XXX.utils.web
-    ~~~~~~~~~~~~~~
+    utils.web
+    ~~~~~~~~~
 
     Common function for web.
 

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-    ProcessName_XXX.views.FrontView
-    ~~~~~~~~~~~~~~
+    views.FrontView
+    ~~~~~~~~~~~~~~~
 
     The blueprint for front view.
 

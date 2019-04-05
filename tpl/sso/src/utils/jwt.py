@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-    ProcessName_XXX.utils.jwt
-    ~~~~~~~~~~~~~~
+    utils.jwt
+    ~~~~~~~~~
 
     Json Web Token
 

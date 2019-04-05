@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-    ProcessName_XXX.utils.log
-    ~~~~~~~~~~~~~~
+    utils.log
+    ~~~~~~~~~
 
     Define logging base class.
 

@@ -63,14 +63,8 @@ SSO = {
 # 系统配置
 SYSTEM = {
 
-    "HMAC_SHA256_KEY": getenv("xxx_hmac_sha256_key", "273d32c8d797fa715190c7408ad73811"),
-    # hmac sha256 key
-
-    "AES_CBC_KEY": getenv("xxx_aes_cbc_key", "YRRGBRYQqrV1gv5A"),
+    "AES_KEY": getenv("xxx_aes_key", "YRRGBRYQqrV1gv5A"),
     # utils.aes_cbc.CBC类中所用加密key
-
-    "JWT_SECRET_KEY": getenv("xxx_jwt_secret_key", "WBlE7_#qDf2vRb@vM!Zw#lqrg@rdd3A6"),
-    # utils.jwt.JWTUtil类中所用加密key
 }
 
 

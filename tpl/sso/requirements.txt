@@ -1,7 +1,8 @@
 Flask>=0.10.0
 Flask-PluginKit>=2.2.0
+SecureHTTP>=0.4.0
 requests
 setproctitle
 gevent
 gunicorn
-pycrypto
+git+https://github.com/saintic/flask-pluginkit-ssoclient

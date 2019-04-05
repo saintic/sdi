@@ -19,10 +19,10 @@
 """
 
 import os
-from config import GLOBAL
+from config import GLOBAL, SSO, SYSTEM
 from version import __version__
 from utils.tool import err_logger, access_logger, plugin_logger
-from utils.web import verify_sessionId, analysis_sessionId, get_redirect_url, get_userinfo
+from utils.web import verify_sessionId, analysis_sessionId, get_redirect_url, get_userinfo, set_userinfo
 from views import FrontBlueprint
 from flask import request, g, jsonify
 from flask_pluginkit import PluginManager, blueprint, Flask
@@ -37,16 +37,16 @@ __date__ = 'xxx'
 app = Flask(__name__)
 app.config.update(
     SECRET_KEY=os.urandom(24),
-    PLUGINKIT_GUNICORN_ENABLED=True,
-    PLUGINKIT_GUNICORN_PROCESSNAME="gunicorn: master [{}]".format(GLOBAL["ProcessName"])
+    PLUGINKIT_SSO=SSO,
+    PLUGINKIT_AESKEY=SYSTEM["AES_CBC_KEY"]
+    PLUGINKIT_SETUSERINFO_CALLBACK=set_userinfo
 )
 
 # 初始化插件管理器(自动扫描并加载运行)
-plugin = PluginManager(app, logger=plugin_logger)
+plugin = PluginManager(app, logger=plugin_logger, plugin_packages=["flask-pluginkit-ssoclient"])
 
 # 注册视图包中蓝图
 app.register_blueprint(FrontBlueprint)
-app.register_blueprint(blueprint, url_prefix="/PluginManager")
 
 # 添加模板上下文变量
 @app.context_processor

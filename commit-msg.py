@@ -45,7 +45,6 @@ def specification_check(filename):
                             return 4
                         else:
                             return 0
-
                     else:
                         echo("Error: please keep a blank line before the body of commit message")
                         return 3

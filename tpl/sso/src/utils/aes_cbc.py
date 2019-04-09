@@ -7,7 +7,7 @@
     CBC使用密码和salt（起扰乱作用）按固定算法（md5）产生key和iv。然后用key和iv（初始向量，加密第一块明文）加密（明文）和解密（密文）。
 
     :copyright: (c) 2019 by staugur.
-    :license: BSD, see LICENSE for more details.
+    :license: BSD 3-Clause, see LICENSE for more details.
 """
 
 from Crypto.Cipher import AES

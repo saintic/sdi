@@ -6,7 +6,7 @@
     The blueprint for front view.
 
     :copyright: (c) 2019 by staugur.
-    :license: BSD, see LICENSE for more details.
+    :license: BSD 3-Clause, see LICENSE for more details.
 """
 
 from flask import Blueprint, g, redirect

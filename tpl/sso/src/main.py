@@ -15,7 +15,7 @@
     http://docs.jinkan.org/docs/flask/patterns/caching.html
 
     :copyright: (c) 2019 by staugur.
-    :license: BSD, see LICENSE for more details.
+    :license: BSD 3-Clause, see LICENSE for more details.
 """
 
 import os
@@ -37,8 +37,6 @@ __date__ = 'xxx'
 app = Flask(__name__)
 app.config.update(
     SECRET_KEY=os.urandom(24),
-    PLUGINKIT_SSO=SSO,
-    PLUGINKIT_AESKEY=SYSTEM["AES_CBC_KEY"]
     PLUGINKIT_SETUSERINFO_CALLBACK=set_userinfo
 )
 

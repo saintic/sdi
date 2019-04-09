@@ -1,5 +1,6 @@
 ## 关于git的使用实践
 
+
 ### 1、 .gitconfig
 
 ```bash
@@ -23,6 +24,7 @@ $ cat ~/.gitconfig
 [core]
     editor = vim
 ```
+
 
 ### 2、 .gitmessage
 
@@ -51,6 +53,7 @@ $ cat ~/.vimrc
 autocmd Filetype gitcommit setlocal spell textwidth=72
 ```
 
+
 ### 3、 gpg
 
 ```bash
@@ -61,6 +64,7 @@ $ git config --global commit.gpgsign true
 $ git config --global user.signingkey Your_GPG_ID
 ```
 
+
 ### 4、 强制提交信息规范的钩子
 
 Please see [commit-msg.py](commit-msg.py "commit-msg.py")
@@ -68,4 +72,26 @@ Please see [commit-msg.py](commit-msg.py "commit-msg.py")
 ```bash
 $ cd GIT-PROJECT
 $ wget -O .git/hooks/commit-msg https://satic.io/commit-msg && chmod +x .git/hooks/commit-msg
+```
+
+
+### 5、 开源协议使用规范
+
+BSD 3-Clause License && Link Anti-996 License.
+
+- For reStructuredText:
+```reStructuredText
+.. image:: https://img.shields.io/badge/link-996.icu-red.svg
+   :target: https://996.icu
+   :alt: 996.ICU
+```
+
+- For Markdown:
+```markdown
+[![996.ICU](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
+```
+
+- For HTML:
+```html
+<a href="https://996.icu"><img src="https://img.shields.io/badge/link-996.icu-red.svg"></a>
 ```

@@ -6,7 +6,7 @@
     Json Web Token
 
     :copyright: (c) 2019 by staugur.
-    :license: BSD, see LICENSE for more details.
+    :license: BSD 3-Clause, see LICENSE for more details.
 """
 
 import hashlib

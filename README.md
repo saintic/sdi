@@ -42,3 +42,7 @@
 
 * 收邮件：[staugur@saintic.com](mailto:staugur@saintic.com)
 
+
+## 许可证
+
+[![996.ICU](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)

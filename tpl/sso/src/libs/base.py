@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 """
-    ProcessName_XXX.libs.base
-    ~~~~~~~~~~~~~~
+    libs.base
+    ~~~~~~~~~
 
     Base class: dependent services, connection information, and public information.
 
     :copyright: (c) 2019 by staugur.
-    :license: BSD, see LICENSE for more details.
+    :license: BSD 3-Clause, see LICENSE for more details.
 """
 
 from utils.tool import plugin_logger

@@ -6,7 +6,7 @@
     The program configuration file, the preferred configuration item, reads the system environment variable first.
 
     :copyright: (c) 2019 by staugur.
-    :license: BSD, see LICENSE for more details.
+    :license: BSD 3-Clause, see LICENSE for more details.
 """
 
 from os import getenv
@@ -44,8 +44,11 @@ SSO = {
     "sso_allow": getenv("xxx_sso_allow"),
     # 允许登录的uid列表，格式是: uid1,uid2,...,uidn
 
-    "sso_deny": getenv("xxx_sso_deny")
+    "sso_deny": getenv("xxx_sso_deny"),
     # 拒绝登录的uid列表, 格式同上
+
+    "secret_key": getenv("xxx_secret_key", "d1d5eb327d55d83eb96ead9cdd1394e8"),
+    # AES、JWT等所使用的加密key，要求是16的倍数
 }
 
 
@@ -61,11 +64,7 @@ SSO = {
 
 
 # 系统配置
-SYSTEM = {
-
-    "AES_KEY": getenv("xxx_aes_key", "YRRGBRYQqrV1gv5A"),
-    # utils.aes_cbc.CBC类中所用加密key
-}
+SYSTEM = {}
 
 
 #插件配置段

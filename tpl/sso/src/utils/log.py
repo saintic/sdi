@@ -37,7 +37,7 @@ class Logger:
         formatter = logging.Formatter('[ %(levelname)s ] %(asctime)s %(filename)s:%(lineno)d %(message)s', datefmt=self._logfmt)
         handler.setFormatter(formatter)
         self._logger.addHandler(handler)
-        self._logger.setLevel(self._levels.get(GLOBAL.get('LogLevel', "INFO")))
+        self._logger.setLevel(self._levels.get(GLOBAL.get('LogLevel', 'INFO')) or logging.INFO)
 
     @property
     def getLogger(self):

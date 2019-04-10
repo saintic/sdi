@@ -29,26 +29,25 @@ class PluginBase(ServiceBase):
 
 
 class CacheBase(ServiceBase):
-    """ 缓存基类: 提供缓存数据功能，使用werkzeug提供的工具 """
+    """ 缓存基类: 提供缓存数据功能，使用Flask-PluginKit提供的缓存接口 """
 
     def __init__(self):
         super(CacheBase, self).__init__()
-        self.cache = self.__redis_cache if hasattr(self, "redis") else self.__simple_cache
+        self.__cache = self.__redis_cache if hasattr(self, "redis") else self.__local_cache
 
     @property
-    def __simple_cache(self):
-        from werkzeug.contrib.cache import SimpleCache
-        return SimpleCache()
+    def __local_cache(self):
+        from flask_pluginkit import LocalStorage
+        return LocalStorage()
 
     @property
     def __redis_cache(self):
-        return self.redis
+        from config import REDIS
+        from flask_pluginkit import RedisStorage
+        return RedisStorage(redis_url=REDIS)
 
     def set(self, key, value, timeout=None):
-        return self.cache.set(key, value, timeout)
+        return self.__cache.set(key, value)
 
     def get(self, key):
-        return self.cache.get(key)
-
-    def has(self, key):
-        return self.cache.has(key)
+        return self.__cache.get(key)

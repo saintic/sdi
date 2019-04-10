@@ -18,30 +18,28 @@
     :license: BSD 3-Clause, see LICENSE for more details.
 """
 
-import os
-from config import GLOBAL, SSO, SYSTEM
+from os import urandom
+from flask import request, g, jsonify
+from flask_pluginkit import Flask, PluginManager
 from version import __version__
 from utils.tool import err_logger, access_logger, plugin_logger
-from utils.web import verify_sessionId, analysis_sessionId, get_redirect_url, get_userinfo, set_userinfo
-from views import FrontBlueprint
-from flask import request, g, jsonify
-from flask_pluginkit import PluginManager, blueprint, Flask
+from utils.web import get_redirect_url, get_userinfo, set_userinfo
+from views.FrontView import FrontBlueprint
 
 __author__ = 'staugur'
 __email__ = 'staugur@saintic.com'
 __doc__ = 'xxx'
 __date__ = 'xxx'
 
-
 # 初始化定义application
 app = Flask(__name__)
 app.config.update(
-    SECRET_KEY=os.urandom(24),
+    SECRET_KEY=urandom(24),
     PLUGINKIT_SETUSERINFO_CALLBACK=set_userinfo
 )
 
-# 初始化插件管理器(自动扫描并加载运行)
-plugin = PluginManager(app, logger=plugin_logger, plugin_packages=["flask-pluginkit-ssoclient"])
+# 初始化插件管理器
+plugin = PluginManager(app, stpl=True, logger=plugin_logger, plugin_packages=["flask_pluginkit_ssoclient"])
 
 # 注册视图包中蓝图
 app.register_blueprint(FrontBlueprint)
@@ -53,12 +51,8 @@ def GlobalTemplateVariables():
     return data
 
 
-@app.before_request_top
+@app.before_request
 def before_request():
-    # 登录状态标记，True表示已登录，False表示未登录
-    g.signin = verify_sessionId(request.cookies.get("sessionId"))
-    # sessionId和userId
-    g.sid, g.uid = analysis_sessionId(request.cookies.get("sessionId"), "tuple") if g.signin else (None, None)
     # 用户信息
     g.userinfo = get_userinfo(g.uid)
     # 客户端IP地址
@@ -67,48 +61,6 @@ def before_request():
     g.redirect_uri = get_redirect_url()
 
 
-@app.after_request
-def after_request(response):
-    data = {
-        "status_code": response.status_code,
-        "method": request.method,
-        "ip": g.ip,
-        "url": request.url,
-        "referer": request.headers.get('Referer'),
-        "agent": request.headers.get("User-Agent")
-    }
-    access_logger.info(data)
-    return response
-
-
-@app.errorhandler(500)
-def server_error(error=None):
-    if error:
-        err_logger.error("500: {}".format(error), exc_info=True)
-    message = {
-        "msg": "Server Error",
-        "code": 500
-    }
-    return jsonify(message), 500
-
-
-@app.errorhandler(404)
-def not_found(error=None):
-    message = {
-        'code': 404,
-        'msg': 'Not Found: ' + request.url,
-    }
-    return jsonify(message), 404
-
-
-@app.errorhandler(403)
-def Permission_denied(error=None):
-    message = {
-        "msg": "Authentication failed, permission denied.",
-        "code": 403
-    }
-    return jsonify(message), 403
-
-
 if __name__ == '__main__':
+    from config import GLOBAL
     app.run(host=GLOBAL["Host"], port=int(GLOBAL["Port"]), debug=True)

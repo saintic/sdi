@@ -52,6 +52,14 @@ SSO = {
 }
 
 
+# 系统配置段
+SYSTEM = {}
+
+
+#插件配置段
+PLUGINS = {}
+
+
 #MYSQL = getenv("xxx_mysql_url")
 #MYSQL数据库连接信息
 #mysql://host:port:user:password:database?charset=&timezone=
@@ -62,10 +70,3 @@ SSO = {
 #redis://[:password]@host:port/db
 #host,port必填项,如有密码,记得密码前加冒号,比如redis://localhost:6379/0
 
-
-# 系统配置
-SYSTEM = {}
-
-
-#插件配置段
-PLUGINS = {}

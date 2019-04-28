@@ -37,6 +37,7 @@
     - 如果是公开项目，请在其项目issues下新建；
     - 其他封存项目，请在此仓库issues下新建；
     - 再者就是目前未公开项目，比如开放平台和短网址，也请在此新建issues。
+    - 如果您没有github账号，可以在此提交：https://passport.saintic.com/feedback.html
 
 * 加入Q群：[`577543189`](https://jq.qq.com/?_wv=1027&k=5aZyCMV)
 

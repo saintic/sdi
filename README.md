@@ -4,7 +4,7 @@
 
 - 我的博客：https://blog.saintic.com
 
-- 文档地址：http://docs.saintic.com { [备用地址](https://www.kancloud.cn/staugur/staugur/740788 "备用地址") }
+- 文档地址：http://docs.saintic.com { [备用地址](https://saintic-docs.readthedocs.io "备用地址") }
 
 - 仓库地址：https://github.com/staugur && https://github.com/saintic
 

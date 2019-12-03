@@ -6,7 +6,7 @@
 ```bash
 $ cat ~/.gitconfig
 [user]
-    name = Mr.tao
+    name = Hiroshi.tao
     email = staugur@saintic.com
 [color]
     ui = true

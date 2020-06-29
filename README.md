@@ -29,6 +29,38 @@
 
 - [关于git的相关配置（gpg、gitmessage、hook）](git.md)
 
+## Iconfont图标
+
+iconfont.css modify:
+
+```
+.saintic-icon-0-5{font-size: 0.5em;}
+
+.saintic-icon-1{font-size: 1em;}
+
+.saintic-icon-1-5{font-size: 1.5em;}
+
+.saintic-icon-2{font-size: 2em;}
+
+.saintic-icon-2-5{font-size: 2.5em;}
+
+.saintic-icon-3{font-size: 3em;}
+
+.saintic-icon-3-5{font-size: 3.5em;}
+
+.saintic-icon-4{font-size: 4em;}
+
+.saintic-icon-4-5{font-size: 4.5em;}
+
+.saintic-icon-5{font-size: 5em;}
+```
+
+iconfont.css compress:
+
+```
+$ yarn global add uglify-tool
+$ ug iconfont.css iconfont.min.css
+```
 
 ## 提交问题
 
@@ -43,7 +75,3 @@
 
 * 收邮件：[staugur@saintic.com](mailto:staugur@saintic.com)
 
-
-## 许可证
-
-[![996.ICU](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)

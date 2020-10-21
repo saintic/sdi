@@ -1,8 +1,0 @@
-Flask>=0.10.0
-Flask-PluginKit>=2.3.2
-SecureHTTP>=0.4.0
-requests
-setproctitle
-gevent
-gunicorn
-git+https://github.com/saintic/flask-pluginkit-ssoclient@master

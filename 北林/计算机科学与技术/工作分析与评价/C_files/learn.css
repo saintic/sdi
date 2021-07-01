@@ -1,0 +1,572 @@
+@charset "utf-8";
+/* 自适应分辩率 */
+@media screen and (max-width:780px){
+	.uniHead{width:730px;}
+   .answerCard{display:none;}
+   .wrap_l{margin-right: 0;}
+   .wrap_main{width:580px;}
+   .analytical,.analyseMain{width:74%;}
+   .wrap_l{margin-right:300px;}
+}
+@media screen and  (min-width:780px) and (max-width:1000px){
+   .answerCard{display:none;}
+   .wrap_l{margin-right:0px;}
+   .analytical,.analyseMain{width:90%;}
+}
+/* 自适应分辩率 */
+@media screen and (min-width:1000px){
+   .answerCard{display:block;}
+   .wrap_l{margin-right: 300px;}
+   .analytical,.analyseMain{width:90%;}
+}
+
+
+html,body{width:100%;height:100%;margin:0; padding:0;font-family:"Microsoft YaHei",arial;}
+body{background:#f3f3f3;}
+body > #pageWrap {height:auto !important;height:100%;min-height:100%;}
+body,button,input,select,textarea {font:13px/1.5 \5FAE\8F6F\96C5\9ED1,tahoma,arial,\5b8b\4f53,arial,sans-serif;}
+body{background:#efefef;color:#434343}
+img{vertical-align:top;}
+a{color:#0000ff; text-decoration:none;}
+a:hover{text-decoration:none;}
+.pageMain{padding-bottom:80px;}
+.layout_main{width:100%;margin:0 auto;padding-top:20px;}
+.wrap_l{padding:0px 55px;}
+/**
+.wrap_l h2{
+	font-size:28px;
+	font-weight:700;
+	text-align:center;
+	color:#333;
+}
+**/
+.wrap_l p.p1{font-size:14px;line-height:20px;padding-top:5px;color:#666;height:20px;text-align:center;}
+.wrap .error_sel{width:980px; height:54px; line-height:54px; padding:20px 0 0 20px;}
+.wrap .error_sel strong{font-size:22px; font-family:"Microsoft YaHei"; font-weight:400; color:#4c618b; margin-right:30px;}
+.wrap .error_sel div a{}
+.wrap .error_sel div.cf{color:#ffffff;}
+.wrap_main{ background:#ffffff; padding:35px 30px;}
+.over-hidden{overflow: hidden;}
+.bordnone{border:none!important;}
+.exercise{position:relative;height:auto !important;height:80px;min-height:80px;margin-bottom:5px;}
+.exercise.pl75{padding-left:30px!important;}
+.pl0{padding-left:0!important;}
+.bg_icon{background:url(http://otsstatic.chinaedu.net/otsstyle/img/default/images/sprite_icon.png) no-repeat;boder:none;}
+.close{background-position: -80px -91px;height: 10px;width: 10px;}
+#bg{background: rgb(150,150,150);opacity:0.5;position:absolute;z-index:998;}
+.rep_loop{border-bottom: 1px solid #f1f1f1;width: 100%;}
+/**
+.titleArea{color:#808080;font-size:16px;padding:10px 0 10px 2px;line-height:24px;word-wrap:break-word;word-break:break-all;}
+.titleArea p{margin-bottom:10px;font-size:16px; font-family:"Microsoft YaHei"; color:#808080;line-height:22px;float:left;width:670px;}
+.titleArea p span.num{color:#ff6000; margin-right:5px;}
+.titleArea img{max-width:600px;}
+.titleArea .fbe{font-weight:400;}
+.titleArea li{float:left; margin-right:65px; font-size:16px;}
+*/
+.titleArea{color:#808080;font-size:16px;padding:10px 0 10px 2px;line-height:24px;word-wrap:break-word;word-break:break-all;}
+.titleArea p{color:#666;line-height:24px;padding-left:25px;font-size:15px;}
+.titleArea .nb{font-size:18px; font-weight:bold; font-family:"Microsoft YaHei";color:#ff6000;float:left;width:45px;margin-left:-30px; text-align:right; margin-right:5px;}
+.answerArea{padding: 10px;}
+.answerArea li{margin:5px 0 5px 25px;line-height:30px;font-size:15px;color:#999;}
+.answerArea li.active{background:url(http://otsstatic.chinaedu.net/otsstyle/img/default/images/yes.png) no-repeat 0 14px;}
+.answerArea li.red,.analytical span.mr40 strong.red{color:#ef5d5d;}
+.answerArea li.green,.analytical span.mr40 strong.green{color:#7bd653;}
+.answerArea p{font-size:14px; color:#808080; padding-left:30px;}
+.answerArea .corrMis{line-height: 30px;font-size: 14px;color: #999;padding-left:24px;}
+.answerArea .corrmisanswer{width:500px;height:100px;background-color:#ffffff;color:#666;line-height:24px;padding:0 5px;}
+.fjDoc{color:#0000ff;}
+.answerArea span.falsenext{background:url(http://otsstatic.chinaedu.net/otsstyle/img/default/images/trunfalsenext_03.jpg) no-repeat center;}
+.answerArea span.falsenext_a{background:#ff6000 url(http://otsstatic.chinaedu.net/otsstyle/img/default/images/trunfalsenext_false.png) no-repeat center;}
+.answerArea span.truenext{background:url(http://otsstatic.chinaedu.net/otsstyle/img/default/images/trunfalsenext_05.jpg) no-repeat center;}
+.answerArea span.truenext_a{background:#ff6000 url(http://otsstatic.chinaedu.net/otsstyle/img/default/images/trunfalsenext_true.png) no-repeat center;}
+.answerArea span.judgement{float: left;width: 58px;height: 27px;line-height: 27px;text-align: right;border: 1px solid #f9de9f;background: #fff;color: #ff6000;cursor: pointer;margin-right: 10px;}
+.essayans{padding: 5px 0 5px 25px;line-height: 30px;font-size: 14px;color: #999; cursor: pointer;}
+.essayans .answerp3{color:#666;line-height:24px;}
+.essayans img{
+	display: block;
+    max-width: 700px;
+    max-height: 500px;
+    cursor: -webkit-zoom-in;
+    cursor: -moz-zoom-in;
+    cursor: zoom-in;
+}
+.essayans .answerp3 a{color:#1a96d2;text-decoration:underline;}
+.essayansOne{padding: 5px 0 5px 25px;line-height: 30px;font-size: 16px;color: #666;cursor: pointer;}
+.div1{ position:relative;}
+.s1{ position:absolute;left:3px;top:3px; color:#bbbbbb; display:none; font-size:12px;}
+.div1 input{height:22px; line-height:22px; padding-left:5px; font-size:16px; color:#bbbbbb; border:none; border-bottom:1px solid #e8e8e8;}
+.answerArea .ay{margin-right:15px;}
+.answerArea p{font-size:14px; color:#808080; padding-left:30px;}
+.oper a{display:block;width:66px; height:36px; line-height:36px; padding-left:15px; color:#bbbbbb; background:url(http://otsstatic.chinaedu.net/otsstyle/img/default/images/bg_07.jpg) no-repeat 0 12px;}
+.item{border-left:2px solid #e8e8e8;padding-left:14px;}
+.item img{max-width:500px;}
+.item .row{line-height:22px; font-size:14px; color:#9f9f9f;padding-bottom:5px;word-wrap:break-word;word-break:break-all;}
+.item .row p{font-size:14px; color:#9f9f9f;}
+.item .dot{float:left;width:12px;height:12px;margin-left:-24px;margin-top:1px;background:#ff8800;border:3px solid #f6f6f6;-moz-border-radius:12px;-webkit-border-radius:12px; border-radius:12px;}
+.item .name{font-size:14px;color:#ff8800;}
+.item.last{border-color:#f6f6f6;}
+.prenext {margin:auto;line-height:36px;width:192px;margin-top:20px;}
+.prepage {width:86px; display:block; float:left; height:36px; line-height:36px; color:#ffffff;  background:#ff6000;  text-align:center; font-size:16px;}
+.nextpage {width:86px;display:block;  float:right; height:36px; line-height:36px; color:#ffffff;  background:#ff6000;  text-align:center; font-size:16px;}
+.pager_disab{background:#738092;}
+.examBoard{padding:45px 30px; width:715px; background:#ffffff;}
+.replyArea{margin-bottom:20px; padding:20px 0 0 30px;}
+.replyArea span{float:left;width:58px;height:27px;line-height:27px;text-align:center;border:1px solid #f9de9f;background:#fff;color:#ff6000;cursor:pointer;margin-right:10px;}
+.replyArea span.true{width:64px; height:33px; background:url(http://otsstatic.chinaedu.net/otsstyle/img/default/images/truefalse_03.jpg) no-repeat; color:#ffffff; border:none;}
+.replyArea span.false{width:64px; height:33px; background:url(http://otsstatic.chinaedu.net/otsstyle/img/default/images/truefalse_05.jpg) no-repeat; color:#ffffff; border:none;}
+.replyArea span em.falsebiao{background:url(http://otsstatic.chinaedu.net/otsstyle/img/default/images/trunfalsenext_false.png) no-repeat center; display:block;width:64px; height:30px;}
+.replyArea span em.truebiao{background:url(http://otsstatic.chinaedu.net/otsstyle/img/default/images/trunfalsenext_true.png) no-repeat center; display:block; width:64px; height:30px;}
+.replyArea span.selected{background:#ff6000; color:#ffffff;}
+.replyArea span.falsenext{background:url(http://otsstatic.chinaedu.net/otsstyle/img/default/images/trunfalsenext_03.jpg) no-repeat center;}
+.replyArea span.falsenext_a{background:#ff6000 url(http://otsstatic.chinaedu.net/otsstyle/img/default/images/trunfalsenext_false.png) no-repeat center;}
+.replyArea span.truenext{background:url(http://otsstatic.chinaedu.net/otsstyle/img/default/images/trunfalsenext_05.jpg) no-repeat center;}
+.replyArea span.truenext_a{background:#ff6000 url(http://otsstatic.chinaedu.net/otsstyle/img/default/images/trunfalsenext_true.png) no-repeat center;}
+.replyArea a{ height:27px; line-height:27px; padding-left:20px; float:right; background:url(http://otsstatic.chinaedu.net/otsstyle/img/default/images/doubts_06.jpg) no-repeat 0 6px; color:#bbbbbb;}
+.replyArea a.doubts{color:#ff6000; background:url(http://otsstatic.chinaedu.net/otsstyle/img/default/images/doubts_03.jpg) no-repeat 0 6px;}
+.replyArea p a{background:none; color:#ff6000; padding:0; float:none; text-decoration:underline;}
+.replyArea_nei a{background:none; color:#bbbbbb; float:none;}
+.submit{width:250px; margin: 0 auto; padding:70px 0 25px 0;}
+.submit a{width: 86px;height: 36px;line-height: 36px;color: #ffffff;display: inline-block;background: #ff6000;text-align: center;font-size: 16px;margin-left: 20px;}
+.errorCorectArea{height: 30px;font-size: 14px;width: 96%;}
+.errorCorectArea .errCorect_a{float: right;color: #bbbbbb;cursor: pointer;margin-right:30px;}
+.answerCard{
+	position:fixed;
+	right:20px;
+	top:70px;
+	background:#fff;
+	width:280px;
+}
+/* .exercise .titleArea p{ display:inline; padding-left: 0;}
+.exercise .titleArea p:first-child{display:inline;  } */
+.exercise .titleArea p p{padding-left: 0;}  
+.exercise .titleArea p:nth-child(2){display: inline; padding-left: 0;}
+.answerCard_t{padding:20px 15px 20px 15px;}
+.answerCard_t h3{color:#6a6968;font-size:16px;margin-bottom:20px;}
+.answerpr1{font-size:18px;color:#f60;text-align:center;}
+.answerpr1 span{font-size:80px;}
+.answerpr2{text-align:center;font-size:13px;color:#909090;}
+.answerCard_b{border-top:1px solid #e8e8e8;margin:0 15px;display:none;padding:20px 0;}
+.answerCard_b h3{margin-bottom:35px;color:#909090;font-family:'宋体';}
+.answerCard_b h3 span{width:68px;text-align:left;margin-bottom:0;}
+.answerCard_b h3 i{width:10px;height:10px;display:block;float:left;margin:4px 5px 0 0;}
+.answerCard_b .red{background:#ef5d5d;}
+.answerCard_b .green{background:#7bd653;}
+.answerCard_b .orange{background:#ff8000;}
+.answerCard_b h4{font-size:14px;color:#1a96d2;margin-bottom:15px;}
+.answerCard_b h5{font-size:xx14px;color:#666;margin-bottom:15px;}
+.answerCard_b li{float:left;width:24px;height:26px;margin:0 10px 10px 0;}
+.answerCard_b li a{width:24px;height:26px;color:#fff;text-align:center;line-height:26px;border-radius:3px;display:block;}
+.answerCard_tan{}
+.answerCard_tan a{color:#999;padding-top:12px;height:20px;text-align:center;display:block;background:#f8f8f8 url(http://otsstatic.chinaedu.net/otsstyle/img/default/images/analyse_icon.png) no-repeat 85px -80px;}
+.answerCard_tan a.aon{background:#f8f8f8 url(http://otsstatic.chinaedu.net/otsstyle/img/default/images/analyse_icon.png) no-repeat 85px -37px;padding-top:3px;height:30px;}
+.answerCard.top20{top:20px!important;}
+.answerCard .timeArea{font-weight:bold;height:62px;line-height:62px;text-align:center;font-size:22px;color:#ff8800;background:#f6f6f6 url(http://otsstatic.chinaedu.net/otsstyle/img/default/images/time_icon.png) 40px 18px no-repeat;}
+.answerCard p{color:#ff9200; font-size:14px; height:16px; line-height:16px; padding:25px 0; width:210px; text-align:center;}
+.answerCard p strong{font-size:16px; color:#808080;}
+.answerCard p img{width:15px; height:15px; margin:0 3px;}
+.answerCard span{    
+	display: block;
+    font-size: 14px;
+    width: 50px;
+    text-align: center;
+    margin-top: -3px;
+    float: left;
+}
+.operArea{width: 99%;height: 250px;font-family: "Microsoft YaHei";font-size: 14px;padding-left: 18px;font-size: 14px;overflow-y: scroll;background-color: #ffffff;}
+.fir{font-weight: bold;}
+.card_firseq{font-weight: bold;color: #8c8c8c;padding-bottom: 6px;font-size: 14px;}
+.card_fir{font-weight: bold;color: #71b6df;padding-bottom: 6px;font-size: 14px;}
+.operArea li{position: relative;float: left;margin: 0 11px 11px 0;width: 27px;height: 27px;line-height: 27px;text-align: center;cursor: pointer;border-radius: 2px;}
+.uniHead{width: 100%;margin: 0 auto;height: 50px;background: #1a96d2;}
+.headimg{
+	background: url(http://otsstatic.chinaedu.net/otsstyle/img/default/images/OTSlogo.jpg) no-repeat 40px 2px;
+	width: 100%;
+	height: 50px;
+}
+
+.uniHead_self{width: 100%;margin: 0 auto;height: 50px;background: #2d2d2b;}
+.headimg_self{background: url(http://otsstatic.chinaedu.net/otsstyle/img/default/images/self_log.png) no-repeat 40px 2px;height: 50px;margin: 0 auto;}
+
+.operArea  li.falset{background:#ef5d5d; color:#fff;}
+.operArea  li.noData{background:#666; color:#fff;}
+.operArea  li.truet{background:#7bd653; color:#fff;}
+
+.operArea li.falset em{position:absolute; top:20px; right:-6px; width:13px; height:13px; z-index:9999; background:url(http://otsstatic.chinaedu.net/otsstyle/img/default/images/falsetrue_03.png) no-repeat;}
+.operArea li.truet em{position:absolute; top:20px; right:-6px; width:13px; height:13px; z-index:9999; background:url(http://otsstatic.chinaedu.net/otsstyle/img/default/images/falsetrue_05.png) no-repeat;}
+.answerArea li.correct{color:#5ac08c;}
+.answerArea li.correctbacj{color:#5ac08c;font-weight:bold; background:#f6f6f6;}
+
+.answerArea li.error{color:#e16161;}
+.answerArea li.bac{background:#f6f6f6;}
+.answerArea li.err{background:#f6f6f6; color:#ff6000; }
+.answerArea li span.err{background:#f6f6f6; color:#ff6000; font-weight:bold;display:block;}
+.opercom {color: #71b6df;padding-bottom:6px;font-size:22px;}
+.operstru {color: #8c8c8c;padding-bottom:6px;padding-left:30px;font-size:16px;}
+.answerCard .exerciseArray li{position:relative;float:left;margin:0 11px 11px 0;width:27px;height:27px;line-height:27px;text-align:center;background:#eee;color:#8e8d8d;cursor:pointer;-moz-border-radius:2px;-webkit-border-radius:2px; border-radius:2px;}
+.answerCard .exerciseArray li.indoubt{background:#798dae; color:#ffffff;}
+.answerCard .exerciseArray li.indoubt em{position:absolute; top:20px; right:-6px; width:13px; height:13px; z-index:9999;  background:url(http://otsstatic.chinaedu.net/otsstyle/img/default/images/exerciseArray_03.png) no-repeat;}
+.answerCard .exerciseArray li.current{background:#bbb;color:#fff;}
+.answerCard .exerciseArray li.currentnext{background:#798dae;color:#fff;}
+.answerCard .exerciseArray li.f60{ background:#ff6000;color:#fff;}
+.answerCard .exerciseArray li.falset{background:#e16161; color:#fff;}
+.answerCard .exerciseArray li.noData{background:#798dae; color:#fff;}
+.answerCard .exerciseArray li.falset em{position:absolute; top:20px; right:-6px; width:13px; height:13px; z-index:9999; background:url(http://otsstatic.chinaedu.net/otsstyle/img/default/images/falsetrue_03.png) no-repeat;}
+.answerCard .exerciseArray li.truet{background:#80d8ab; color:#fff;}
+.answerCard .exerciseArray li.truet em{position:absolute; top:20px; right:-6px; width:13px; height:13px; z-index:9999; background:url(http://otsstatic.chinaedu.net/otsstyle/img/default/images/falsetrue_05.png) no-repeat;}
+.answerCard .btn{height:36px;line-height:36px;border:0 none;width:182px;cursor:pointer;font-size:16px;color:#fff;background:#ff6000; outline: none;}
+.answerCard .Graybtn{background:#eee;}
+.tfanswer{width:150px;height:66px;background:#fff;}
+.tfanswer .queTrue{position:relative;float:left; display:block;margin-bottom:30px;margin-top: 17px;margin-left: 15px;width:15px;height:15px;background:#00ff00;}
+.tfanswer .quefalse{position:relative;float:left; display:block;margin-bottom:30px;margin-top: 17px;margin-left: 15px;width:15px;height:15px;background:#ff0000;}
+.tfanswer .queName{position:relative;float:left; display:block;margin-bottom:30px;margin-top: 14px;margin-left: 10px;width:30px;height:15px;}
+.biaotiName{width:150px;height:100px;}
+.answerCard .biaotiName .btName{display: block;font-size: 14px;width: 150px;magin-top:20px;text-align: center;}
+.clearfix:after{content:'.';display:block;height:0;clear:both;visibility:hidden;}
+.clearfix{*zoom:1;}
+.clearfix .clear{_height:0px;}
+.analyseMain{padding:10px 30px;background:#f8f8f8;;display:none;border-top:1px solid #f3f3f3;margin-left:25px;width: 90%;}
+.analyseMain .analy_j{width:68px;height:30px;line-height:30px;text-align:center;color:#fff;background:#999;font-size:14px;border-radius:5px;margin-right:15px;}
+.analyseMain .analy_x{width:72%;display:block;padding-top:4px;margin-right: 40px;color: #999;font-size: 15px;line-height: 28px;}
+.analyseMain .analy_x p{font-size:15px;color:#999;line-height:24px;}
+
+.analytical{padding:10px 30px;background:#f8f8f8;margin-left:25px;line-height:30px;    width: 90%;}
+/**.analytical span{display:block;}*/
+.analytical span.mr40{margin-right:40px;color:#999;font-size:15px;line-height:28px;}
+.analytical span strong.mr5{margin-right:5px;}
+.analytical span strong.str{width:320px;}
+.analytical span.mr40 strong{font-weight:400;}
+.analytical .toggle a{display:block; width:60px; height:28px; line-height:28px; padding-right:12px;background:url(http://otsstatic.chinaedu.net/otsstyle/img/default/images/analyse_icon.png) no-repeat right -48px; color:#808080;}
+.analytical .toggle_open a{background:url(http://otsstatic.chinaedu.net/otsstyle/img/default/images/analyse_icon.png) no-repeat right -74px;}
+.h90{height:90px;}
+.analytical p{padding-top:0;color:#999;font-size:16px;width:100%;}
+.analytical p span{color:#666;}
+.analytical .acfont{color:#666;}
+.analytical-mark{ height:116px; padding:0 30px;background:#f8f8f8;margin-left:40px;}
+.analytical-mark span.mr40{margin-right:40px;color:#999;font-size:16px;line-height:56px;}
+.analytical-mark span.mr40 strong{font-weight:400;margin-left:10px;}
+.analytical-mark .toggle a{display:block; width:60px; height:36px; line-height:36px; padding-right:12px;margin-top:12px;background:url(http://otsstatic.chinaedu.net/otsstyle/img/default/images/analyse_icon.png) no-repeat right -43px; color:#808080;}
+.analytical-mark .toggle_open a{background:url(http://otsstatic.chinaedu.net/otsstyle/img/default/images/analyse_icon.png) no-repeat right -69px;}
+.analytical-mark p{padding-top:58px;*padding-top:0;color:#999;font-size:16px;width:100%;}
+.analytical-mark p span{color:#666;}
+.st1{margin-left:5px}
+.w10{width:10px;}
+.w20{width:20px;}
+.w30{width:30px;}
+.w40{width:40px;}
+.w50{width:50px;}
+.w65{width:65px;}
+.w80{width:80px;}
+.w100{width:100px;}
+.w150{width:150px;}
+.w200{width:200px;}
+.w250{width:250px;}
+.w300{width:300px;}
+.w350{width:350px;}
+.w400{width:400px;}
+.w450{width:450px;}
+.w500{width:500px;}
+.w600{width:600px;}
+.w700{width:700px;}
+.w800{width:800px;}
+.w900{width:900px;}
+.w1000{width:1000px;}
+.wb80{
+	width:80%;
+}
+
+
+
+.hide {
+	display: none;
+}
+.bankTrue{
+	color: #5ac08c;
+}
+.bankFalse{
+	color: #e16161;
+}
+
+/*margin*/
+.m5{margin:5px;}
+.m10{margin:10px;}
+.m15{margin:15px;}
+.m20{margin:20px;}
+.ml0{margin-left:0;}
+.ml5{margin-left:5px;}
+.ml10{margin-left:10px;}
+.ml15{margin-left:15px;}
+.ml20{margin-left:20px;}
+.mr0{margin-right:0;}
+.mr5{margin-right:5px;}
+.mr10{margin-right:10px;}
+.mr15{margin-right:15px;}
+.mr20{margin-right:20px;}
+.mt0{margin-top:0;}
+.mt5{margin-top:5px;}
+.mt10{margin-top:10px;}
+.mt15{margin-top:15px;}
+.mt20{margin-top:20px;}
+.mb0{margin-bottom:0;}
+.mb5{margin-bottom:5px;}
+.mb10{margin-bottom:10px;}
+.mb15{margin-bottom:15px;}
+.mb20{margin-bottom:20px;}
+
+.col-main {float:left;width:100%;min-height:1px;margin-top:25px;}
+.examBoard{padding:30px;background:#fff;-moz-box-shadow:0 0 1px 1px rgba(0, 0, 0, 0.1); -webkit-box-shadow:0 0 1px 1px rgba(0, 0, 0, 0.1); box-shadow:0 0 1px 1px rgba(0, 0, 0, 0.1);}
+.examHead{border-bottom:3px dashed #f1f1f1;padding-bottom:20px;margin-bottom:20px;}
+.examHead .title{text-align:center;font-size:28px;color:#606060;margin-bottom:10px;}
+.examHead .subTitle{text-align:center;font-size:14px;color:#909090;margin-bottom:10px;}
+.examHead p.p1{font-size:14px;line-height:20px;padding-top:5px;color:#666;height:20px;text-align:center;}
+.exanType {font-size: 16px;font-family: "Microsoft YaHei";color: #808080;}
+.subjecta{position:absolute;left:0;top:8px;width:50px;height:50px;line-height:50px;text-align:center;background:#ef6c00;font-size:16px;color:#fff;-moz-border-radius:50px;-webkit-border-radius:50px; border-radius:50px;}
+.subjectb{position:absolute;left:0;top:2px;width:50px;height:50px;line-height:50px;text-align:center;background:#00bcd5;font-size:16px;color:#fff;-moz-border-radius:50px;-webkit-border-radius:50px; border-radius:50px;}
+
+/*新增详情页分数和非分数值漂浮*/
+.analyse{
+	margin-top:25px !important;
+	width: 210px;
+	background: #fff;
+	position: fixed;
+	height:400px;
+	font-family:"Microsoft YaHei";
+}
+
+.answerCard_t .ansTitle{
+	margin-top:20px;
+	margin-left:20px;
+	font-size: 16px;
+	font-weight:bold;
+	color:#8b8b8b;
+}
+.answerCard_t .ansCon{
+	line-height: 30px;
+    padding-top: 40px;
+    padding-left: 60px;
+}
+.answerCard_t .ansscore{
+    height:50px;
+    font-size: 54px;
+    font-weight:bold;
+    color:#fa6602;
+    text-align:center;
+    margin-top:20px;
+    font-family:"Microsoft YaHei";
+}
+.answerCard_t .ansname{
+    font-size:18px;color:#f60;text-align:center;
+}
+.ansname span{font-size:80px;}
+.answerCard_t .ansTime{
+    line-height:20px;
+    height:20px;
+    color:#cecece;
+}
+.answerCard_t .ansTimNam{
+    padding-left:60px;
+}
+.answerCard_t .ansTimVal{
+    height:20px;
+}
+.answerCard_t .ansbottom{
+	margin-top:26px;
+	height:50px;
+}
+.answerCard_t .ansbottom .ansitem{
+   width:65px;
+   border-left: 2px solid #e8e8e8;
+   text-align:center;
+}
+.answerCard_t .ansbottom .ansitem{
+   width:65px;
+   border-left: 2px solid #e8e8e8;
+   text-align:center;
+}
+.answerCard_t .ansbottom .ansitem .ansBocEach{
+	color:#f98e1a;
+	font-size:16px;
+}
+.answerCard_t .ansbottom .ansitem .ansBotCon{
+    color:#bcbcbc;
+    font-size:16px;
+}
+
+
+.accuracy{
+    margin-top:250px;
+    width: 210px;
+    background: #fff;
+    position: fixed;
+    height:240px;
+    font-family:"Microsoft YaHei";
+}
+.accuracy .ansTitle{
+    margin-top:20px;
+    margin-left:20px;
+    font-size: 16px;
+    font-weight:bold;
+    color:#8b8b8b;
+}
+.accuracy .ansCon{
+    height:150px;
+    width:210px;
+}
+.accuracy .ansTime{
+    line-height:20px;
+    height:20px;
+    color:#cecece;
+    margin-left:55px;
+}
+.go-topD {
+    position: fixed;
+    bottom: 3%;
+    left: 77%;
+    z-index: 2;
+    width: 55px;
+    height: 55px;
+    background: url(http://otsstatic.chinaedu.net/otsstyle/img/default/images/go-top.png) 0 0 no-repeat;
+}
+.goTop{
+	position: fixed;
+  left: 66%;
+  width: 235px;
+  bottom: 15%;
+  padding: 40px 55px;
+	
+}
+/*判断正确*/
+.judgecorrect{
+	width:76px;
+	height:24px;
+	display: inline-block;
+}
+.judgecorrectgreen{
+	width:76px;
+	height:24px;
+	display: inline-block;
+}
+.judgecorrectred{
+	width:76px;
+	height:24px;
+	display: inline-block;
+}
+.judgecorrectbac{
+	width:76px;
+	height:24px;
+	display: inline-block;
+}
+.judgeerror{
+	width:76px;
+	height:24px;
+	display: inline-block;
+	margin-left:30px;
+}
+.judgeerrorgreen{
+	width:76px;
+	height:24px;
+	display: inline-block;
+}
+.judgeerrorred{
+	width:76px;
+	height:24px;
+	display: inline-block;
+}
+/*判断题*/
+.judgecorrect-bg{
+	background:url(http://otsstatic.chinaedu.net/otsstyle/img/default/images/correct.png) no-repeat;
+}
+.judgecorrectgreen-bg{
+	background:url(http://otsstatic.chinaedu.net/otsstyle/img/default/images/correctgreen.png) no-repeat;
+}
+.judgecorrectred-bg{
+	background:url(http://otsstatic.chinaedu.net/otsstyle/img/default/images/correctred.png) no-repeat;
+}
+.judgecorrectbac-bg{
+	background:url(http://otsstatic.chinaedu.net/otsstyle/img/default/images/correctbac.png) no-repeat;
+}
+.judgeerror-bg{
+	background:url(http://otsstatic.chinaedu.net/otsstyle/img/default/images/error.png) no-repeat;
+}
+.judgeerrorgreen-bg{
+	background:url(http://otsstatic.chinaedu.net/otsstyle/img/default/images/errorgreen.png) no-repeat;
+}
+.judgeerrorred-bg{
+	background:url(http://otsstatic.chinaedu.net/otsstyle/img/default/images/errorred.png) no-repeat;
+}
+
+.testFoot{margin:20px 0px 20px 0px;line-height:40px;}
+.bg_icon_a{background:url(http://otsstatic.chinaedu.net/otsstyle/img/default/images/sprite_icon.png) no-repeat;boder:none;}
+.flbtn{float:left;margin-left:155px;height:33px;width:72px;color:#fff;cursor:pointer;}
+.frbtn{float:right;margin-right:155px;height:33px;width:72px;color:#fff;cursor:pointer;}
+.blueBtn{background-position: -155px -39px;}
+.grayBtn{background-position: -155px -72px;}
+
+.nav_mark{
+	margin-top: 15px;
+	border-top:1px solid #e8e8e8;
+	position: relative;
+	padding:15px 0px 15px 0px;
+}
+.nav_mark ul{
+	padding:0px 0px 14px 0px;
+}
+.nav_mark .nav_span{
+	float:left;
+	margin-left:5px;
+	margin-top:-5px;
+}
+.nav_mark .na_correct{
+	    height: 15px;
+    background-color: #7ad752;
+    width: 15px;
+    float: left;
+        margin-left: 10px;
+}
+.nav_mark .na_error{
+	height: 15px;
+    background-color: #ef5c5c;
+    width: 15px;
+    float: left;
+    margin-left: 10px;
+}
+.nav_mark .na_isans{
+	height: 15px;
+    background-color: #666;
+    width: 15px;
+    float: left;
+    margin-left: 10px;
+}
+.nav_mark .na_noans{
+	height: 15px;
+    background-color: #e8e8e8;
+    width: 15px;
+    float: left;
+        margin-left: 10px;
+}
+.ansDetail_Corr_Tip{width: 685px;height: 400px;border: 2px solid #b7b7b7;background-color: #f8f8f8;margin-left: 200px;position: absolute;z-index:999;}
+.ansDetail_Corr_Tip .pop_title{background: url(http://otsstatic.chinaedu.net/otsstyle/img/default/images/dialog_title_bg.gif) repeat-x; height: 40px;padding: 0 20px;font: bold 14px/38px "Microsoft Yahei";color: #9f9e9e;}
+.ansDetail_Corr_Tip .pop_title .clo_s{margin-top:15px;cursor:pointer;}
+.ansDetail_Corr_Tip .remarkdescribe{line-height:36px;height:36px;margin-left:38px;margin-top:10px;font-size:14px;color:#737373;}
+.ansDetail_Corr_Tip .Cor_Remark_Val{margin-left:38px;width:610px;height:158px;}
+.ansDetail_Corr_Tip .Cor_SelectArea{margin-top:5px;height:90px;overflow-y: auto;}
+.ansDetail_Corr_Tip .Cor_SelectArea ul{margin-left:38px;margin-top:10px;font-size:16px;}
+.ansDetail_Corr_Tip .Cor_SelectArea li{float:left;width:300px;margin-top:5px;}
+
+
+.ansDetail_Corr_Tip .pop_foot{height:50px;line-height:50px;text-align:center;font-size:15px;}
+.ansDetail_Corr_Tip .pop_foot .button{
+	width: 72px;
+    height: 33px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 6px;
+}
+.ansDetail_Corr_Tip .pop_foot .backbtn{background-position: -157px -73px;}
+.ansDetail_Corr_Tip .pop_foot .confirmbtn{background-position: -157px -40px;}
+
+
+
+
+
+
+

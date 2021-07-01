@@ -1,0 +1,149 @@
+@charset "utf-8";
+/* 弹出层
+ ****************************************/
+.pop-iframe {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	filter:alpha(opacity=0);
+}
+.pop {
+	position: absolute;
+	z-index: 10;
+	background-color: #FBFBFB;
+	border-radius: 3px;
+	box-shadow: 0 0 30px #555,
+				inset 0 0 3px #dedede;
+}
+.pop-box {
+	border: 1px solid #DCDCDC;
+	border-radius: 3px;
+	width: 998px;
+	margin: 10px;
+}
+.pop .pop-title{
+	height: 40px;
+	padding-right: 10px;
+	color: #666;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	font-size: 14px;
+	background-image: -moz-linear-gradient(top, #f7f7f7, #dadcdd);
+	background-image: -webkit-linear-gradient(top, #f7f7f7, #dadcdd);
+	background-image: -o-linear-gradient(top, #f7f7f7, #dadcdd);
+	background-image: linear-gradient(to bottom, #f7f7f7, #dadcdd);
+	border-bottom: 1px solid #DCDCDC;
+	box-shadow: inset 0 0 2px #fff;
+}
+.pop .pop-title .txt {
+	float: left;
+	padding-top: 12px;
+	padding-left: 20px;
+}
+.pop .pop-title.tac .txt {
+	float: none;
+	display: inline-block;
+}
+.pop .pop-title .close {
+	float: right;
+	width: 18px;
+	height: 18px;
+	margin-top: 12px;
+	/*background: url(../images/cop_pop_close.png) 0 0 no-repeat;*/
+}
+.pop .pop-main {
+	background: #FFF;
+}
+.pop .pop-con {
+	overflow-x: hidden;
+	overflow-y: auto;
+	padding: 20px;
+	height: 380px;
+}
+.pop .pop-tb-con {
+	padding: 10px;
+	height: 400px;
+}
+.pop-small .pop-box {
+	width: 630px;
+}
+.pop-small .pop-con {
+	height: auto;
+}
+.pop .lyt-lr {
+	margin-bottom: 0;
+}
+.pop .lyt-lr p{
+	margin-bottom: 0;
+}
+.pop .btn-box {
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+.pop .item .btn-box,
+.tb-box + .btn-box {
+	margin: 15px 0;
+}
+
+.pop .pop-footer {
+	height: 30px;
+	padding-top: 7px;
+	margin-bottom: 0;
+	background-image: -moz-linear-gradient(top, #f4f4f4, #e7e7e7);
+	background-image: -webkit-linear-gradient(top, #f4f4f4, #e7e7e7);
+	background-image: -o-linear-gradient(top, #f4f4f4, #e7e7e7);
+	background-image: linear-gradient(to bottom, #f4f4f4, #e7e7e7);
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+	margin: 1px;
+}
+.pop .pop-footer .btn {
+	margin: 0 10px;
+}
+.pop .pop-footer .btn-grays {
+	margin: 0 0 0 5px;
+	float: left;
+}
+.pop .pop-footer .mr200 {
+	margin-right: 200px;
+}
+.pop .tips-box {
+	margin: 0 20px 20px;
+}
+.pop .pb0,
+.win-tips .pb0,
+.pb0 {
+	padding-bottom: 0!important;
+}
+
+/* 错误提示弹出层
+ ****************************************/
+.p-warning {
+	width: 480px;
+	text-align: center;
+}
+.p-warning .warn-con 
+{
+	/*background: url(../images/cop_v_icon.png) left center no-repeat;*/
+	padding: 15px 0 15px 50px;
+	margin: 10px 0;
+	text-align: left;
+	display: inline-block;
+	font-size: 14px;
+	line-height: 1.5;
+}
+.btn-r {
+	display: inline-block;
+	color: #fff;
+	font-size: 12px;
+	height: 25px;
+	line-height: 25px;
+	padding-right: 20px;
+}
+.btn-gray .btn-r {
+	color: #666;
+}

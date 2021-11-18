@@ -4,5 +4,8 @@ Dockerfile
 Makefile
 README
 bin/
-dist/
 sdi
+node_modules/
+.parcel-cache/
+package.json
+yarn.lock

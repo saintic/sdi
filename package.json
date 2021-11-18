@@ -1,0 +1,17 @@
+{
+    "name": "sdi",
+    "version": "1.0.0",
+    "description": "Homepage",
+    "source": "src/index.html",
+    "author": "Hiroshi.tao <me@tcw.im>",
+    "private": true,
+    "scripts": {
+        "start": "parcel serve --cache-dir ~/.cache/parcel-cache --dist-dir ~/.local/sdi",
+        "build": "rm -rf dist && parcel build --no-source-maps --no-cache"
+    },
+    "devDependencies": {
+        "@parcel/packager-raw-url": "^2.0.1",
+        "@parcel/transformer-jsonld": "^2.0.1",
+        "parcel": "latest"
+    }
+}

@@ -1,3 +1,4 @@
 .DS_Store
-dist/
 sdi
+node_modules/
+.parcel-cache/

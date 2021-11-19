@@ -18,19 +18,21 @@ package main
 
 import (
 	"embed"
-	"io/fs"
+	"html/template"
 	"net/http"
 )
 
 //go:embed _/bjfu
 var bjfu embed.FS
 
-//go:embed dist
-var dist embed.FS
-var html, _ = fs.Sub(dist, "dist")
+//go:embed dist/index.html
+var indexTmpl []byte
 
 func main() {
 	http.Handle("/_/", http.FileServer(http.FS(bjfu)))
-	http.Handle("/", http.FileServer(http.FS(html)))
+	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		tmpl, _ := template.New("index").Parse(string(indexTmpl))
+		tmpl.Execute(w, nil)
+	})
 	http.ListenAndServe(":12345", nil)
 }

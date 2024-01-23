@@ -7,5 +7,6 @@ bin/
 sdi
 node_modules/
 .parcel-cache/
-package.json
 yarn.lock
+pnpm-lock.yaml
+dist/

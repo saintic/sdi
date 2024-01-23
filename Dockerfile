@@ -1,17 +1,16 @@
-ARG buildos=golang:1.17-alpine
-ARG runos=scratch
+ARG buildos=node:20-slim
+ARG runos=joseluisq/static-web-server:2
 
-# -- build dependencies with alpine --
+# -- build dependencies --
 FROM $buildos AS builder
-WORKDIR /build
+WORKDIR /app
 COPY . .
-ARG goproxy
-ARG TARGETARCH
-RUN if [ "x$goproxy" != "x" ]; then go env -w GOPROXY=${goproxy},direct; fi ; \
-    CGO_ENABLED=0 GOOS=linux GOARCH=$TARGETARCH go build -ldflags "-s -w" .
+ARG REGISTRY
+RUN yarn --registry=$REGISTRY && yarn build
 
 # -- run application with a small image --
 FROM $runos
-COPY --from=builder /build/sdi /bin/
-EXPOSE 12345
-ENTRYPOINT ["sdi"]
+COPY --from=builder /app/dist/* /app/public/
+EXPOSE 1234
+WORKDIR /app
+ENTRYPOINT ["/static-web-server", "--port", "1234"]

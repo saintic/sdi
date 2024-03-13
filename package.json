@@ -1,6 +1,6 @@
 {
     "name": "sdi",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "description": "Homepage",
     "source": "index.html",
     "author": "Hiroshi.tao <me@tcw.im>",
@@ -11,8 +11,8 @@
         "build": "parcel build --cache-dir /tmp/parcel-cache --dist-dir dist"
     },
     "devDependencies": {
-        "@parcel/packager-raw-url": "2.11.0",
-        "@parcel/transformer-jsonld": "2.11.0",
-        "parcel": "^2.3.1"
+        "@parcel/packager-raw-url": "2.12.0",
+        "@parcel/transformer-jsonld": "2.12.0",
+        "parcel": "^2.12.0"
     }
 }

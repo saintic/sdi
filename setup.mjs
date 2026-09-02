@@ -1,6 +1,6 @@
 // setup config
 
-fetch('https://open.saintic.com/api/configcenter/sdi.json')
+fetch('https://hub.saintic.com/api/configcenter/sdi.json')
     .then(response => response.json())
     .then(res => {
         console.debug(res)

@@ -1,12 +1,15 @@
-ARG buildos=node:20-slim
+ARG buildos=node:22-slim
 ARG runos=joseluisq/static-web-server:2
 
 # -- build dependencies --
 FROM $buildos AS builder
 WORKDIR /app
 COPY . .
-ARG REGISTRY
-RUN yarn --registry=$REGISTRY && yarn build
+ARG REGISTRY=""
+RUN corepack enable \
+    && if [ -n "$REGISTRY" ]; then pnpm config set registry "$REGISTRY"; fi \
+    && pnpm install --frozen-lockfile \
+    && pnpm run build
 
 # -- run application with a small image --
 FROM $runos

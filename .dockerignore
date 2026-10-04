@@ -7,6 +7,4 @@ bin/
 sdi
 node_modules/
 .parcel-cache/
-yarn.lock
-pnpm-lock.yaml
 dist/

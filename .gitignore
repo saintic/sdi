@@ -3,3 +3,4 @@ sdi
 node_modules/
 .parcel-cache/
 dist/
+.codebuddy/
